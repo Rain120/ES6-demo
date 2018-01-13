@@ -4,7 +4,7 @@
 
 import yargs from 'yargs'
 
-const argv = yargs
+const args = yargs
 
 // 执行所有的js
     .option('production', {
@@ -35,8 +35,10 @@ const argv = yargs
 // 配置端口
 .option('port', {
     string: true,
-    default: 3000,
+    default: 8080,
     describe: 'server port'
 })
 
 .argv
+
+export default args

@@ -15,20 +15,41 @@ gulp.task('scripts', () => {
     return gulp.src(['app/js/index.js'])
         // 默认错误处理机制，错误集中处理
         .pipe(plumber({
-            errorHandle() {}
+            errorHandle: function() {}
         }))
-
-    // 重命名
-
-    // webpack对js进行编译，3个参数，(引入模块，null，错误处理)
-
-    // 文件存储路径
-
-    // 重命名以备份文件
-
-    // 压缩文件，压缩方式配置
-
-    // 重新文件存储路径
-
-    // 监听文件是否变化，并热更新
+        // 重命名
+        .pipe(named())
+        // webpack对js进行编译，3个参数，(引入模块，null，错误处理)
+        .pipe(gulpWebpack({
+            module: {
+                loaders: [{
+                    test: /\.js$/,
+                    loader: 'babel-loader'
+                }]
+            }
+        }), null, (err, status) => {
+            log(`Finished '${colors.cyan('scripts')}'`, status.toString({
+                chunks: false
+            }))
+        })
+        // 文件存储路径
+        .pipe(gulp.dest('server/public/js'))
+        // 重命名以备份文件
+        .pipe(rename({
+            basename: 'cp',
+            extname: '.min.js'
+        }))
+        // 压缩文件，压缩方式配置
+        .pipe(uglify({
+            compress: {
+                properties: false
+            },
+            output: {
+                'quote_keys': true
+            }
+        }))
+        // 重新文件存储路径
+        .pipe(gulp.dest('server/public/js'))
+        // 监听文件是否变化，并热更新
+        .pipe(gulpif(args.watch, livereload()))
 })
