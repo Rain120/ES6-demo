@@ -1,0 +1,33 @@
+{
+  "name": "es6-demo",
+  "version": "1.0.0",
+  "description": "app 前端代码\r     --css 样式代码\r     --js  js代码\r           --class 类文件\r           --index.js js入口文件\r     --views 页面模板代码\r           --index.ejs 页面入口文件\r           --error.ejs 错误页面文件\r server 服务器代码  使用express -e .构建\r     --bin\r     --node-modules 依赖包文件\r     --public \r     --routes 路由\r     --views 页面入口\r     --app.js\r     --package.js\r tasks 构建工具\r     --util  构建命令脚本",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rain120/ES6-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rain120/ES6-demo/issues"
+  },
+  "homepage": "https://github.com/Rain120/ES6-demo#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-if": "^2.0.2",
+    "gulp-livereload": "^3.8.1",
+    "gulp-plumber": "^1.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "vinyl-named": "^1.1.0",
+    "webpack": "^3.10.0",
+    "webpack-stream": "^4.0.0",
+    "yargs": "^10.1.1"
+  }
+}

@@ -1,0 +1,25 @@
+--app 前端代码
+    --css 样式代码
+    --js  js代码
+          --class 类文件
+          --index.js js入口文件
+    --views 页面模板代码
+          --index.ejs 页面入口文件
+          --error.ejs 错误页面文件
+--server 服务器代码  使用express -e .构建 (首先需要安装node，然后执行cnpm install -g express && cnpm install -g express-generator)
+    --bin
+    --node-modules 依赖包文件
+    --public 
+        --images 图片文件
+        --javascript 
+        --stylesheets
+            --style.css
+    --routes 路由
+    --views 页面入口
+    --app.js
+    --package.js
+--tasks 构建工具
+    --util  构建命令脚本
+--.babelsrc babel配置文件，babel编译自动查找
+--gulpfile.babel.js gulp编译文件
+--package.js
