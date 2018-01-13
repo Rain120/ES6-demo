@@ -8,7 +8,6 @@
           --error.ejs 错误页面文件
 --server 服务器代码  使用express -e .构建 (首先需要安装node，然后执行cnpm install -g express && cnpm install -g express-generator)
     --bin
-    --node-modules 依赖包文件
     --public 
         --images 图片文件
         --javascript 
