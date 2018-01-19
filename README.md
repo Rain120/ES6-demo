@@ -22,5 +22,3 @@
 --.babelsrc babel配置文件，babel编译自动查找
 --gulpfile.babel.js gulp编译文件
 --package.js
-
-Git is a free software ...

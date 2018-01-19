@@ -1,5 +1,5 @@
 import "babel-polyfill"
-import { lesson } from "./class/lesson8";
+import { lesson } from "./class/lesson9";
 class Test {
     constructor() {
         this.mes = "Hello ES6"
