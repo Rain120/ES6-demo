@@ -23,4 +23,4 @@
 --gulpfile.babel.js gulp编译文件
 --package.js
 
-Creating a new branch is quick.
+Git is a free software ...
