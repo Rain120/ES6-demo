@@ -22,3 +22,5 @@
 --.babelsrc babel配置文件，babel编译自动查找
 --gulpfile.babel.js gulp编译文件
 --package.js
+
+Creating a new branch is quick.
