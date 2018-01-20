@@ -61,8 +61,8 @@
   // 对象是地址的引用，不检测使用对象的地址是否被垃圾机制回收
   let weakList = new WeakSet()
 
-  let arg = {}
-  // has, delelte
+  let arg = {'ms': 'w4r3qqeaaa'}
+  // add, has, delelte
   weakList.add(arg)
 
   console.log('weakList', weakList)
@@ -155,7 +155,7 @@
 // 优先使用map，set
 // 如果对数据要求较高，保证每个数据的唯一性使用set
 {
-  // set, map, object 对比
+  // map, set, object 对比
   let item = { t: 1 }
   let map = new Map()
   let set = new Set()

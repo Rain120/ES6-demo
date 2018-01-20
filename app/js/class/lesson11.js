@@ -122,6 +122,6 @@
   console.info(person)
 
   person.age = 19
-  
+
   console.info(person)
 }

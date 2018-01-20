@@ -7,6 +7,7 @@
   console.log(Object.prototype.toString.call(a))
   console.log(Object.prototype.toString.call(a1))
   console.log(Object.prototype.toString.call(a2))
+  console.log(a1 === a);
   console.log(a1 === a2);
 
   // Symbol.for()判断是否有key值，会先在全局检查key值是否存在，不存在就会生成一个独一无二的值

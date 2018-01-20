@@ -47,6 +47,40 @@
 }
 
 {
+  let stu1 = ['ball', 'game', 'sleep', 'paint']
+  let stu2 = ['eat', 'game', 'sleep']
+  let test = 'paint'
+  let test1 = 'eat'
+  let tStu = []
+  let stu = []
+  for (var i = 0; i < stu1.length; i++) {
+    console.log('test ', i, stu1[i].indexOf(test))
+    console.log('test1 ', i, stu1[i].indexOf(test1))
+    if(stu1[i].indexOf(test) !== -1) {
+      tStu.push(test)
+    }
+  }
+  console.log('tStu', tStu)
+
+  // for (var i = 0; i < stu1.length; i++) {
+  //   for (var j = 0; j < stu2.length; j++) {
+  //     if(stu1[i].includes(stu2[j])) {
+  //       stu.push(stu2[j])
+  //     }
+  //   }
+  // }
+  for (var i = 0; i < stu1.length; i++) {
+    for (var j = 0; j < stu2.length; j++) {
+      console.log(stu1[i].indexOf(stu2[j]))
+      if(stu1[i].indexOf(stu2[j]) !== -1) {
+        stu.push(stu2[j])
+      }
+    }
+  }
+  console.log(stu)
+}
+
+{
   let str="abc";
   console.log(str.repeat(2));
 }
