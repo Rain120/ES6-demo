@@ -13,6 +13,24 @@
 // 字符串对象的4个使用正则表达式的方法： match(),replace(),search(),split()这四个方法全部调用RegExp的实例的方法。
 
 {
+<<<<<<< HEAD
+=======
+    var str = 'Rainy 123'
+    let strSplit = "Rainy123 Rainy123 Rainy123 Rainy123 Rainy123 Rainy123 Rainy123"
+    console.log("match " + str.match(/\w+/ig))
+    console.log("match " + str.match(/\s/ig))
+    console.log("match " + str.match(/\d/ig))
+    console.log("match " + str.match(/4/ig))
+    console.log("replace " + str.replace(/123/ig, "Number"))
+    console.log("replace " + str.replace(/1/ig, "Number"))
+    console.log("search " + str.search(/R/ig))
+    console.log("search " + str.search(/4/ig,))
+    console.log("split " + strSplit.split(/\d/))
+    console.log("split " + strSplit.split(' ', 4))
+}
+
+{
+>>>>>>> 53386b0a1db0951b24030eba9f69c718c9665493
     let regex = new RegExp('xyz', 'ig');
     console.log(regex.test('xyz0XYZ1xyz2'), regex.exec('xyz0XYZ1xyz2'));
 }

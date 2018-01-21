@@ -1,4 +1,7 @@
 {
     "presets": ["es2015"],
-    "compact": true
+    "compact": "true",
+    "plugins": [
+        "transform-decorators-legacy"
+    ]
 }
