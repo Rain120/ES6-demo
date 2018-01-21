@@ -1,3 +1,5 @@
+import 'babel-polyfill'
+import './class/lesson4'
 class Test {
     constructor() {
         this.mes = "Hello ES6"
