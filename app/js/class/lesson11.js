@@ -88,7 +88,7 @@
       set(target, key, value, proxy) {
         if(target.hasOwnProperty(key)) {
           let val = this._validator[key]
-          if(!!val(value)) {
+          if(val(value)) {
             return Reflect.set(target, key, value, proxy)
           } else {
             throw Error(`不能设置${key}为${value}`)
@@ -102,7 +102,7 @@
 
   const personValidators = {
     name(val) {
-      return typeof vsl === 'string'
+      return typeof val === 'string'
     },
     age(val) {
       return typeof val === 'number' && val >= 18
@@ -121,7 +121,7 @@
 
   console.info(person)
 
-  person.age = 19
+  person.age = 18
 
   console.info(person)
 }

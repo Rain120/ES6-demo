@@ -45,8 +45,9 @@
   // 新增API
   console.log('字符串', Object.is('abc', 'abc'), 'abc' === 'abc');
   console.log('数组', Object.is([], []), [] === []);
-  // 浅拷贝,拷贝只有本身属性，你能拷贝继承属性或者不能枚举的属性
+  // 浅拷贝,拷贝只有本身属性，不能拷贝继承属性或者不能枚举的属性
   console.log('拷贝', Object.assign({ a: 'a' }, { b: 'b' }));
+  // 深拷贝 https://github.com/Rain120/JS-demo/blob/master/js/shallowOrdeepCopy.js
 
   let test = {
     k: 123,

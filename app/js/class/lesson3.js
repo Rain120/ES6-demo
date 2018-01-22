@@ -2,41 +2,39 @@
     // #构造函数#
     let regex = new RegExp('xyz', 'i'); //第一个参数是字符串，第二个是修饰符
     let regex2 = new RegExp(/xyz/i); //第一个参数是正则表达式，不接受第二个参数，否则会报错
-    console.log(regex.test('xyz123'), regex2.test('xyz123'));
-    console.log(regex.test('xyZ123'), regex2.test('xyZ123'));
+    console.log(regex.test('xyz123'), regex2.test('xyz123')); // true
+    console.log(regex.test('xyZ123'), regex2.test('xyZ123')); // true
 
     let regex3 = new RegExp(/abc/ig, 'i');
     console.log(regex3.flags); //原有正则对象的修饰符是ig，它会被第二个参数i覆盖
-
+    /// i 
 }
 
 // 字符串对象的4个使用正则表达式的方法： match(),replace(),search(),split()这四个方法全部调用RegExp的实例的方法。
 
 {
-<<<<<<< HEAD
-=======
     var str = 'Rainy 123'
     let strSplit = "Rainy123 Rainy123 Rainy123 Rainy123 Rainy123 Rainy123 Rainy123"
-    console.log("match " + str.match(/\w+/ig))
-    console.log("match " + str.match(/\s/ig))
-    console.log("match " + str.match(/\d/ig))
-    console.log("match " + str.match(/4/ig))
-    console.log("replace " + str.replace(/123/ig, "Number"))
-    console.log("replace " + str.replace(/1/ig, "Number"))
-    console.log("search " + str.search(/R/ig))
-    console.log("search " + str.search(/4/ig,))
-    console.log("split " + strSplit.split(/\d/))
-    console.log("split " + strSplit.split(' ', 4))
+    console.log("match " + str.match(/\w+/i))  //字符 Rainy
+    console.log("match " + str.match(/\s/ig))  //空白字符 
+    console.log("match " + str.match(/\d/ig))  //数字 1, 2, 3
+    console.log("match " + str.match(/4/g))   // null
+    console.log("replace " + str.replace(/123/ig, "Number")) // 123替换成Number
+    console.log("replace " + str.replace(/1/ig, "Number"))  // 1替换成Number
+    console.log("search " + str.search(/R/g))   // 0  返回该字符的位置，没有返回-1
+    console.log("search " + str.search(/4/g,))  // -1
+    console.log("split " + strSplit.split(/\d/, 3))  // 返回前3个以数字分割的字符
+    console.log("split " + strSplit.split(/\s/))  // 返回以空格分割的字符
+    console.log("split " + strSplit.split(' ', 4))  // 返回前4个以空格分割的字符
 }
 
 {
->>>>>>> 53386b0a1db0951b24030eba9f69c718c9665493
     let regex = new RegExp('xyz', 'ig');
     console.log(regex.test('xyz0XYZ1xyz2'), regex.exec('xyz0XYZ1xyz2'));
 }
 
 {
-    // y修饰符
+    // y修饰符  粘连模式：会从上一次执行位置的下一个字符开始执行判断
     let s = 'bbbb_bbb_bb_b';
     var a1 = /b+/g;
     var a2 = /b+/y;
@@ -44,7 +42,7 @@
     console.log(a1.exec(s), a2.exec(s)); // ["bbbb"],["bbbb"]
     console.log(a1.exec(s), a2.exec(s)); // ["bbb"],null
 
-    console.log(a1.sticky, a2.sticky); //表示是否开启了粘连模式
+    console.log(a1.sticky, a2.sticky); //表示是否开启了粘连模式 // false true
 }
 
 {

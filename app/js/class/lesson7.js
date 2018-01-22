@@ -30,7 +30,6 @@
 
 {
   let arrow = v => { 
-    console.log('this ' + this);
     return v * 2;
   };
   let arrow2 = () => 5;
@@ -42,7 +41,6 @@
 {
   // 尾调用 性能优化
   function tail(x){
-    console.log('this ' + this);
     console.log('tail',x);
   }
   function fx(x){

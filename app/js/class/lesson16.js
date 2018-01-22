@@ -9,7 +9,7 @@
 
     class Test {
         @readonly
-        // 此处报警告，需要设置
+        // 此处报警告，对修饰器的实验支持是一项将在将来版本中更改的功能。设置 "experimentalDecorators" 选项以删除此警告。
         // "javascript.implicitProjectConfig.experimentalDecorators": true
         time() {
             return '2018-1-21'
