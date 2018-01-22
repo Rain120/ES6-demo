@@ -1223,10 +1223,11 @@ module.exports = __webpack_require__(126);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__(127);var _lesson=__webpack_require__(330);function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}// import {A, test, Hello} from './class/lesson17'
+__webpack_require__(127);var _lesson=__webpack_require__(330);var _lesson2=_interopRequireDefault(_lesson);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}// import { lesson } from "./class/lesson17"
+// import {A, test, Hello} from './class/lesson17'
 // import * as lesson from './class/lesson17'
-// import lesson17 from './class/lesson17'
-var Test=function Test(){_classCallCheck(this,Test);this.mes="Hello ES6";};// let test = new Test()
+var Test=function Test(){_classCallCheck(this,Test);this.mes="Hello ES6";};var obj={'a':1,'b':{'c':'js','d':'es','f':{g:function g(){}},h:[]}};var arr=[1,2,[3,4,[5,6,7,[8,[9,10]]]]];console.log([].concat(arr));console.log(JSON.parse(JSON.stringify(obj)));// 不能拷贝函数
+console.log(_lesson2.default.shallowCopy(arr));console.log(_lesson2.default.deepCopy(arr));// let test = new Test()
 // console.log(lesson17.A)
 // console.log(lesson17.test)
 // console.log(lesson17.Hello)
@@ -3098,13 +3099,20 @@ module.exports=function(regExp,replace){var replacer=replace===Object(replace)?f
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _applyDecoratedDescriptor(target,property,decorators,descriptor,context){var desc={};Object['ke'+'ys'](descriptor).forEach(function(key){desc[key]=descriptor[key];});desc.enumerable=!!desc.enumerable;desc.configurable=!!desc.configurable;if('value'in desc||desc.initializer){desc.writable=true;}desc=decorators.slice().reverse().reduce(function(desc,decorator){return decorator(target,property,desc)||desc;},desc);if(context&&desc.initializer!==void 0){desc.value=desc.initializer?desc.initializer.call(context):void 0;desc.initializer=undefined;}if(desc.initializer===void 0){Object['define'+'Property'](target,property,desc);desc=null;}return desc;}// decorator 修饰器是个函数
-// 第三方修饰器的JS库：core-decorators
-{var _desc,_value,_class;// 修饰器函数,使用范围是函数中使用
-var readonly=function readonly(target,name,descriptor){descriptor.writable=false;return descriptor;};var Test=(_class=function(){function Test(){_classCallCheck(this,Test);}_createClass(Test,[{key:'time',// 此处报警告，对修饰器的实验支持是一项将在将来版本中更改的功能。设置 "experimentalDecorators" 选项以删除此警告。
-// "javascript.implicitProjectConfig.experimentalDecorators": true
-value:function time(){return'2018-1-21';}}]);return Test;}(),(_applyDecoratedDescriptor(_class.prototype,'time',[readonly],Object.getOwnPropertyDescriptor(_class.prototype,'time'),_class.prototype)),_class);var test=new Test();console.log(test.time());}{var _class2;var typename=function typename(target,name,descriptor){target.myname='Rainy';};// 修饰器作为类的静态属性
-var _Test=typename(_class2=function _Test(){_classCallCheck(this,_Test);})||_class2;console.log('类修饰符',_Test.myname);}{var _dec,_dec2,_desc2,_value2,_class3;var log=function log(type){return function(target,name,descriptor){var src_method=descriptor.value;descriptor.value=function(){for(var _len=arguments.length,arg=Array(_len),_key=0;_key<_len;_key++){arg[_key]=arguments[_key];}src_method.apply(target,arg);console.info('log '+type);};};};var AD=(_dec=log('show'),_dec2=log('click'),(_class3=function(){function AD(){_classCallCheck(this,AD);}_createClass(AD,[{key:'show',value:function show(){console.info('ad show');}},{key:'click',value:function click(){console.info('ad click');}}]);return AD;}(),(_applyDecoratedDescriptor(_class3.prototype,'show',[_dec],Object.getOwnPropertyDescriptor(_class3.prototype,'show'),_class3.prototype),_applyDecoratedDescriptor(_class3.prototype,'click',[_dec2],Object.getOwnPropertyDescriptor(_class3.prototype,'click'),_class3.prototype)),_class3));var ad=new AD();ad.show();ad.click();}
+Object.defineProperty(exports,"__esModule",{value:true});var _typeof=typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"?function(obj){return typeof obj;}:function(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":typeof obj;};var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}// 模块化
+// export let A = 123
+// export function test() {
+//     console.log('test');
+// }
+// export class Hello {
+//     test() {
+//         console.log('class test');
+//     }
+// }
+var A=123;function test(){console.log('test');}var Hello=function(){function Hello(){_classCallCheck(this,Hello);}_createClass(Hello,[{key:'test',value:function test(){console.log('class test');}}]);return Hello;}();function shallowCopy(obj){// 只拷贝对象
+if((typeof obj==='undefined'?'undefined':_typeof(obj))!=='object')return;// 根据obj的类型判断是新建一个数组还是对象
+var newObj=obj instanceof Array?[]:{};// 遍历obj,并且判断是obj的属性才拷贝
+for(var key in obj){if(obj.hasOwnProperty(key)){newObj[key]=obj[key];}}return newObj;}function deepCopy(obj){if((typeof obj==='undefined'?'undefined':_typeof(obj))!=='object')return;var newObj=obj instanceof Array?[]:{};for(var key in obj){if(obj.hasOwnProperty(key)){newObj[key]=_typeof(obj[key])==='object'?deepCopy(obj[key]):obj[key];}}return newObj;}exports.default={A:A,test:test,Hello:Hello,shallowCopy:shallowCopy,deepCopy:deepCopy};
 
 /***/ })
 /******/ ]);
