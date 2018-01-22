@@ -72,32 +72,9 @@ module.exports = __webpack_require__(1);
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-var _lesson=__webpack_require__(2);var _lesson2=_interopRequireDefault(_lesson);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}// import "babel-polyfill"
-// import { lesson } from "./class/lesson16"
-// import {A, test, Hello} from './class/lesson17'
-// import * as lesson from './class/lesson17'
-var Test=function Test(){_classCallCheck(this,Test);this.mes="Hello ES6";};// let test = new Test()
-console.log(_lesson2.default.A);console.log(_lesson2.default.test);console.log(_lesson2.default.Hello);// document.body.innerHTML = test.mes
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}// 模块化
-// export let A = 123
-// export function test() {
-//     console.log('test');
-// }
-// export class Hello {
-//     test() {
-//         console.log('class test');
-//     }
-// }
-var A=123;function test(){console.log('test');}var Hello=function(){function Hello(){_classCallCheck(this,Hello);}_createClass(Hello,[{key:'test',value:function test(){console.log('class test');}}]);return Hello;}();exports.default={A:A,test:test,Hello:Hello};
+throw new Error("Module build failed: ReferenceError: Unknown plugin \"transform-decorators-legacy\" specified in \"E:\\\\Chrome\\\\南昌航空大学\\\\ES6-demo\\\\.babelrc\" at 0, attempted to resolve relative to \"E:\\\\Chrome\\\\南昌航空大学\\\\ES6-demo\"\n    at E:\\Chrome\\南昌航空大学\\ES6-demo\\node_modules\\_babel-core@6.26.0@babel-core\\lib\\transformation\\file\\options\\option-manager.js:180:17\n    at Array.map (<anonymous>)\n    at Function.normalisePlugins (E:\\Chrome\\南昌航空大学\\ES6-demo\\node_modules\\_babel-core@6.26.0@babel-core\\lib\\transformation\\file\\options\\option-manager.js:158:20)\n    at OptionManager.mergeOptions (E:\\Chrome\\南昌航空大学\\ES6-demo\\node_modules\\_babel-core@6.26.0@babel-core\\lib\\transformation\\file\\options\\option-manager.js:234:36)\n    at OptionManager.init (E:\\Chrome\\南昌航空大学\\ES6-demo\\node_modules\\_babel-core@6.26.0@babel-core\\lib\\transformation\\file\\options\\option-manager.js:368:12)\n    at File.initOptions (E:\\Chrome\\南昌航空大学\\ES6-demo\\node_modules\\_babel-core@6.26.0@babel-core\\lib\\transformation\\file\\index.js:212:65)\n    at new File (E:\\Chrome\\南昌航空大学\\ES6-demo\\node_modules\\_babel-core@6.26.0@babel-core\\lib\\transformation\\file\\index.js:135:24)\n    at Pipeline.transform (E:\\Chrome\\南昌航空大学\\ES6-demo\\node_modules\\_babel-core@6.26.0@babel-core\\lib\\transformation\\pipeline.js:46:16)\n    at transpile (E:\\Chrome\\南昌航空大学\\ES6-demo\\node_modules\\_babel-loader@7.1.2@babel-loader\\lib\\index.js:50:20)\n    at Object.module.exports (E:\\Chrome\\南昌航空大学\\ES6-demo\\node_modules\\_babel-loader@7.1.2@babel-loader\\lib\\index.js:175:20)");
 
 /***/ })
 /******/ ]);
